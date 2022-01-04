@@ -9,6 +9,6 @@ This is Jupyter notebook/python code developed for a UW-Madison introductory MRI
 5. [Cartesian Sampling](NoteBooks/Simulated_Sampling.ipynb) : This uses real data to examine undersampling and reconstruction.
 
 # Advanced Notebooks
-1. [Variation Networks](MachineLearning/VarNetToyExample.ipynb) : Toy example of using model based machine reconstruction to reconstruction images with reduced artifacts. 
+1. [Variation Networks](AdvancedNotebooks/VarNetToyExample.ipynb) : Toy example of using model based machine reconstruction to reconstruction images with reduced artifacts. 
 
 
