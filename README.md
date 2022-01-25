@@ -11,4 +11,8 @@ This is Jupyter notebook/python code developed for a UW-Madison introductory MRI
 # Advanced Notebooks
 1. [Variation Networks](AdvancedNotebooks/VarNetToyExample.ipynb) : Toy example of using model based machine reconstruction to reconstruction images with reduced artifacts. 
 
+# Simulations 
+1. [EPI Distortions](Simulations/epi_distortions.py) : Python code to simulate EPI distortions using brute force forward model with off-resonance. 
+2. [Spiral Distortions](Simulations/spiral_distortions.py) : Python code to simulate spiral distortions using brute force forward model with off-resonance. 
+3. [Complex Demodulation](Simulations/demodulation_example.py) : Python code which shows the basic steps to convert real valued detected signal to complex signal in the rotating frame.
 
