@@ -11,7 +11,8 @@ This is Jupyter notebook/python code developed for a UW-Madison introductory MRI
 
 
 # Advanced Notebooks
-1. [Variation Networks](AdvancedNotebooks/VarNetToyExample.ipynb) : Toy example of using model based machine reconstruction to reconstruction images with reduced artifacts. 
+1. [Variation Networks](AdvancedNotebooks/VarNetToyExample.ipynb) : Toy example of using model based machine reconstruction to reconstruction images with reduced artifacts.
+2. [Compressed Sensing](AdvancedNotebooks/Constrained_Reconstruction_Demo.ipynb) : Example using parallel imaging and compressed SENSING
 
 # Simulations 
 1. [EPI Distortions](Simulations/epi_distortions.py) : Python code to simulate EPI distortions using brute force forward model with off-resonance. 
