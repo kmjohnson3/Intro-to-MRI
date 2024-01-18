@@ -8,11 +8,10 @@ This is Jupyter notebook/python code developed for a UW-Madison introductory MRI
 4. [Spatial Selective RF](NoteBooks/Selective_RF_Excitation.ipynb) : This uses sinc pulses to investigate the tradeoffs in RF pulse choices.
 5. [Cartesian Sampling](NoteBooks/Simulated_Sampling.ipynb) : This uses fake data to examine undersampling and reconstruction.
 6. [Cartesian Sampling Real Data](NoteBooks/Recon_Example.ipynb) : This uses real data to examine undersampling and reconstruction.
-7. [Magnetics Field Generation](NoteBooks/Field_Generation.ipynb) : Code to create magnetic fields from loops of wire.
+7. [Magnetic Field Generation](NoteBooks/Field_Generation.ipynb) : Code to create magnetic fields from loops of wire.
 
-s
 # Advanced Notebooks
-1. [Variation Networks](AdvancedNoteBooks/VarNetToyExample.ipynb) : Toy example of using model based machine reconstruction to reconstruction images with reduced artifacts.
+1. [Variation Networks](AdvancedNoteBooks/VarNetToyExample.ipynb) : Toy example of using model based machine learning reconstruction to reconstruction images with reduced artifacts.
 2. [Compressed Sensing](AdvancedNoteBooks/Constrained_Reconstruction_Demo.ipynb) : Example using parallel imaging and compressed SENSING
 
 # Simulations 
