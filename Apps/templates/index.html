@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRI Fid Simulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #e1dede;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        .slider-container {
+            margin: 20px 0;
+        }
+        .slider-label {
+            margin-right: 10px;
+        }
+        .slider {
+            width: 300px;
+        }
+        img {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <h1>FID Signal Decay</h1>
+    
+    <label id="frequency_label" for="frequency">Frequency: </label>
+    <input type="range" id="frequency" name="frequency" min="-400" max="400" step="any" value="0">
+    
+    <label id="t2star_label" for="t2star"> T2 Star: </label>
+    <input type="range" id="t2star" name="t2star" min="0.0" max="0.1" step="any" value="0.1">   
+    
+    <img id="plot" src="{{ url_for('plot_png', frequency=0, t2star=0.1) }}" alt="Sine Wave">
+    <script>
+        var socket = io();
+        var slider_freq = document.getElementById('frequency');
+        var slider_t2star = document.getElementById('t2star');
+        var plot = document.getElementById('plot');
+
+        function updatePlot(){
+            socket.emit('update_frequency', { 
+                frequency: slider_freq.value,
+                t2star: slider_t2star.value 
+            });
+        }
+
+        slider_freq.oninput = updatePlot;
+        slider_t2star.oninput = updatePlot;
+        
+        socket.on('plot_url', function(data) {
+            plot.src = data.url;
+                 
+        });
+
+        socket.on('set_names', function(data) {
+            document.getElementById('t2star_label').innerText=data.t2star_name;
+            document.getElementById('frequency_label').innerText=data.frequency_name;            
+        });
+
+    </script>
+</body>
+</html>
